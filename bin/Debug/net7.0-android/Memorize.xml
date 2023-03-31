@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Memorize</name>
+    </assembly>
+    <members>
+        <member name="F:Memorize.ViewModel.CollectionCardPageViewModel.getCollectionCardListCommand">
+            <summary>The backing field for <see cref="P:Memorize.ViewModel.CollectionCardPageViewModel.GetCollectionCardListCommand"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.CollectionCardPageViewModel.GetCollectionCardListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Memorize.ViewModel.CollectionCardPageViewModel.GetCollectionCardList"/>.</summary>
+        </member>
+        <member name="F:Memorize.ViewModel.CollectionCardPageViewModel.addUpdateCollectionCardCommand">
+            <summary>The backing field for <see cref="P:Memorize.ViewModel.CollectionCardPageViewModel.AddUpdateCollectionCardCommand"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.CollectionCardPageViewModel.AddUpdateCollectionCardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Memorize.ViewModel.CollectionCardPageViewModel.AddUpdateCollectionCard"/>.</summary>
+        </member>
+        <member name="F:Memorize.ViewModel.CollectionCardPageViewModel.routeToLevel1Command">
+            <summary>The backing field for <see cref="P:Memorize.ViewModel.CollectionCardPageViewModel.RouteToLevel1Command"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.CollectionCardPageViewModel.RouteToLevel1Command">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Memorize.ViewModel.CollectionCardPageViewModel.RouteToLevel1"/>.</summary>
+        </member>
+        <member name="F:Memorize.ViewModel.CollectionCardPageViewModel.deleteCardCommand">
+            <summary>The backing field for <see cref="P:Memorize.ViewModel.CollectionCardPageViewModel.DeleteCardCommand"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.CollectionCardPageViewModel.DeleteCardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Memorize.ViewModel.CollectionCardPageViewModel.DeleteCard(Memorize.Model.CollectionCard)"/>.</summary>
+        </member>
+        <member name="F:Memorize.ViewModel.CollectionCardPageViewModel.editCardCommand">
+            <summary>The backing field for <see cref="P:Memorize.ViewModel.CollectionCardPageViewModel.EditCardCommand"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.CollectionCardPageViewModel.EditCardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Memorize.ViewModel.CollectionCardPageViewModel.EditCard(Memorize.Model.CollectionCard)"/>.</summary>
+        </member>
+        <member name="F:Memorize.ViewModel.LearningLevel1ViewModel.selectCollectionCommand">
+            <summary>The backing field for <see cref="P:Memorize.ViewModel.LearningLevel1ViewModel.SelectCollectionCommand"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.LearningLevel1ViewModel.SelectCollectionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Memorize.ViewModel.LearningLevel1ViewModel.SelectCollection"/>.</summary>
+        </member>
+        <member name="F:Memorize.ViewModel.LearningLevel1ViewModel.scrollRightCommand">
+            <summary>The backing field for <see cref="P:Memorize.ViewModel.LearningLevel1ViewModel.ScrollRightCommand"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.LearningLevel1ViewModel.ScrollRightCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Memorize.ViewModel.LearningLevel1ViewModel.ScrollRight"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.RegistrationCollectionCardViewModel.RegistrationCollectionCard">
+            <inheritdoc cref="F:Memorize.ViewModel.RegistrationCollectionCardViewModel._registrationCollectionCard"/>
+        </member>
+        <member name="F:Memorize.ViewModel.RegistrationCollectionCardViewModel.addUpdateCollectionCardCommand">
+            <summary>The backing field for <see cref="P:Memorize.ViewModel.RegistrationCollectionCardViewModel.AddUpdateCollectionCardCommand"/>.</summary>
+        </member>
+        <member name="P:Memorize.ViewModel.RegistrationCollectionCardViewModel.AddUpdateCollectionCardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Memorize.ViewModel.RegistrationCollectionCardViewModel.AddUpdateCollectionCard"/>.</summary>
+        </member>
+    </members>
+</doc>

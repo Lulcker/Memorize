@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Memorize.Model"
+             xmlns:searchHandlers="clr-namespace:Memorize.SearchHandlers"
+             xmlns:viewModels="clr-namespace:Memorize.ViewModel"
+             x:DataType="viewModels:CollectionCardPageViewModel"
+             x:Class="Memorize.View.CollectionCardPage"
+             Title="Collection Page">
+    <Shell.SearchHandler>
+        <searchHandlers:CollectionCardSearchHandler 
+            Placeholder="Search Name"
+            ShowsResults="True"
+            QueryIcon="search"
+            ClearIcon="clear"
+            NavigationRoute="RegistrationCollectionCardPage"
+            CollectionCards="{x:Static viewModels:CollectionCardPageViewModel.CollectionCardForSearch}">
+            <searchHandlers:CollectionCardSearchHandler.ItemTemplate>
+                <DataTemplate x:DataType="models:CollectionCard">
+                    <Grid Margin="5" RowDefinitions="Auto" ColumnDefinitions="40,Auto">
+                        <Image Grid.Row="0" Grid.Column="0" 
+                               Source="user" 
+                               HeightRequest="35" 
+                               WidthRequest="35"/>
+                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding InitalSide}" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </searchHandlers:CollectionCardSearchHandler.ItemTemplate>
+        </searchHandlers:CollectionCardSearchHandler>
+    </Shell.SearchHandler>
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Button Text="Level 1" Command="{Binding RouteToLevel1Command}"/>
+            <Label  Text="Collection Cards"
+                    FontSize="28" 
+                    HorizontalOptions="Center"
+                    Padding="20" 
+                    TextColor="#68B9E8"/>
+            <Button Text="Add Card" Command="{Binding AddUpdateCollectionCardCommand}" 
+                    HorizontalOptions="Center" 
+                    Padding="25" WidthRequest="350"
+                    FontSize="26" 
+                    Margin="10" 
+                    BackgroundColor="#68B9E8"/>
+            <CollectionView ItemsSource="{Binding CollectionCards}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:CollectionCard">
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItemView Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:CollectionCardPageViewModel}}, 
+                                                   Path=EditCardCommand}"
+                                                   CommandParameter="{Binding .}">
+                                        <VerticalStackLayout  BackgroundColor="LightBlue">
+                                            <Label Text="Edit" 
+                                                   HorizontalTextAlignment="Center" 
+                                                   VerticalTextAlignment="Center" 
+                                                   FontAttributes="Bold" 
+                                                   TextColor="White" />
+                                        </VerticalStackLayout>
+                                    </SwipeItemView>
+                                    <SwipeItemView Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:CollectionCardPageViewModel}}, 
+                                                   Path=DeleteCardCommand}"
+                                                   CommandParameter="{Binding .}">
+                                        <VerticalStackLayout BackgroundColor="Red">
+                                            <Label Text="Delete" 
+                                                   VerticalTextAlignment="Center" 
+                                                   HorizontalTextAlignment="Center" 
+                                                   FontAttributes="Bold" 
+                                                   TextColor="White"/>
+                                        </VerticalStackLayout>
+                                    </SwipeItemView>
+                                    </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Frame Margin="10" BorderColor="Gray">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding InitalSide}" 
+                                           FontSize="18" FontAttributes="Bold"
+                                           VerticalOptions="Center"
+                                           LineBreakMode="WordWrap"/>
+                                    <BoxView HorizontalOptions="Fill" 
+                                             HeightRequest="0.8" 
+                                             Margin="0, 20, 0, 20" 
+                                             Color="#89B9E8" 
+                                             VerticalOptions="Center"/>
+                                    <Label Text="{Binding ReverseSide}" 
+                                           FontSize="18" 
+                                           FontAttributes="Bold"
+                                           VerticalOptions="Center" 
+                                           LineBreakMode="WordWrap"/>
+                                </VerticalStackLayout>
+                                <Frame.GestureRecognizers>
+                                    
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

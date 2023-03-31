@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Memorize.ViewModel"
+             xmlns:models="clr-namespace:Memorize.Model"
+             x:DataType="viewModels:LearningLevel1ViewModel"
+             x:Class="Memorize.View.LearningLevel1"
+             Title="Level 1">
+    <StackLayout Margin="20" Padding="0, 150, 0, 0">
+        <CollectionView ItemsSource="{Binding Collection}" ItemsLayout="HorizontalList" x:Name="CView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:CollectionCard">
+                    <Frame Margin="10" BorderColor="Gray" MaximumWidthRequest="350">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding InitalSide}"
+                                   FontSize="18" FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   LineBreakMode="WordWrap" />
+                            <BoxView HorizontalOptions="Fill"
+                                     HeightRequest="0.8" 
+                                     Margin="0, 20, 0, 20" 
+                                     Color="#89B9E8" 
+                                     VerticalOptions="Center"/>
+                            <Label Text="{Binding ReverseSide}"
+                                   x:Name="RLabel"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <HorizontalStackLayout Margin="50" Padding="100">
+            <Button Text="LEFT" Clicked="ScrollLeft"/>
+            <Button Text="RIGHT" Clicked="ScrollRight" HorizontalOptions="Fill"/>
+        </HorizontalStackLayout>
+    </StackLayout>
+</ContentPage>

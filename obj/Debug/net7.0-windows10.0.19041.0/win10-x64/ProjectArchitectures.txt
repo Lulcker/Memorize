@@ -1,0 +1,1 @@
+D:\MAUI\Memorize\Memorize\Memorize.csproj;x64
